@@ -4,8 +4,9 @@ jobs:
   docker-readme:
     runs-on: Ubuntu-20.04
     steps:
-      - uses: peter-evans/dockerhub-description@v2.1.0
-      - env:
-        DOCKERHUB_USERNAME: ${{ secrets.tiktzuki}}
-        DOCKERHUB_PASSWORD: ${{ secrets.Ld201199-}}
-        DOCKERHUB_REPOSITORY: tiktzuki/mysql
+      - name: docker-readme
+        uses: peter-evans/dockerhub-description@v2.1.0
+        env:
+          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME}}
+          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD}}
+          DOCKERHUB_REPOSITORY: tiktzuki/mysql
