@@ -5,7 +5,7 @@ jobs:
     runs-on: Ubuntu-20.04
     steps:
       - name: docker-readme
-        uses: peter-evans/dockerhub-description@v2.1.0
+        uses: docker/build-push-action@v1
         env:
           DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME}}
           DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD}}
