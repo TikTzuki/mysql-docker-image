@@ -1,7 +1,8 @@
 name: Docker Hub description
 on: [push]
+jobs:
   uses: peter-evans/dockerhub-description@v2.1.0
   env:
-  DOCKERHUB_USERNAME: ${{ secrets.tiktzuki}}
-  DOCKERHUB_PASSWORD: ${{ secrets.Ld201199-}}
-  DOCKERHUB_REPOSITORY: tiktzuki/mysql
+    DOCKERHUB_USERNAME: ${{ secrets.tiktzuki}}
+    DOCKERHUB_PASSWORD: ${{ secrets.Ld201199-}}
+    DOCKERHUB_REPOSITORY: tiktzuki/mysql
