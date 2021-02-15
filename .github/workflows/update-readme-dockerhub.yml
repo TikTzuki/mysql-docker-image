@@ -4,9 +4,12 @@ jobs:
   docker-readme:
     runs-on: Ubuntu-20.04
     steps:
+      - name: check out the repo
+        uses: actions/checkout@v2
       - name: docker-readme
         uses: docker/build-push-action@v1
-        env:
-          DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME}}
-          DOCKERHUB_PASSWORD: ${{ secrets.DOCKERHUB_PASSWORD}}
-          DOCKERHUB_REPOSITORY: tiktzuki/mysql
+        with:
+          username : ${{ secrets.DOCKERHUB_USERNAME}}
+          password : ${{ secrets.DOCKERHUB_PASSWORD}}
+          dockerfile: 8.0/Dockerfile
+          repository : tiktzuki/mysql
