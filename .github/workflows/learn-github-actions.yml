@@ -1,10 +1,10 @@
 name: learn-github-actions
-on: [bush]
+on: [push]
 jobs:
         check-bats-version:
-          runs-on: ubuntu-lastest
-          steps:
-              - uses: actions/checkout@v2
-              - uses: action/setup-node@v1
-              - run: npm install -g bats
-              - run: bats -v
+                runs-on: ubuntu-lastest
+                steps:
+                        - uses: actions/checkout@v2
+                        - uses: action/setup-node@v1
+                        - run: npm install -g -bats
+                        - run: bats -v
