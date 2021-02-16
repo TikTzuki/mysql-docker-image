@@ -7,7 +7,7 @@ jobs:
       - name: check out the repo
         uses: actions/checkout@v2
       - name: docker-readme
-        uses: docker/build-push-action@v1
+        uses: peter-evans/dockerhub-description@v2
         with:
           username : ${{ secrets.DOCKERHUB_USERNAME}}
           password : ${{ secrets.DOCKERHUB_PASSWORD}}
