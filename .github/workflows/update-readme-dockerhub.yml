@@ -9,7 +9,6 @@ jobs:
       - name: docker-readme
         uses: peter-evans/dockerhub-description@v2
         with:
-          username : ${{ secrets.DOCKERHUB_USERNAME}}
-          password : ${{ secrets.DOCKERHUB_PASSWORD}}
-          dockerfile: 8.0/Dockerfile
+          username : tiktzuki 
+          password :  Ld201199- 
           repository : tiktzuki/mysql
